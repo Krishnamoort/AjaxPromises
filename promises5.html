@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+</head>
+
+<body>
+    <p id="day1"></p>
+    <script>
+
+        function toMorow(sep5) {
+            setTimeout(function () {
+                document.getElementById('day1').innerHTML = sep5
+            }, 4000)
+        }
+        // function myDuty() {
+        //   var a = "krishna"
+        //  var b = "have an lot of knowledge"
+        // return Promise.resolve(a + " " + b + " " + 'test himself')
+
+        //}
+        async function myDuty() {
+            var a = "krishna"
+            var b = "have an lot of knowledge"
+            return (a + " " + b + " " + 'test himself')
+
+        }
+        function start() {
+            alert(prompt('enter your name'))
+            if (start = "krishna") {
+                myDuty().then(
+                    function (value) { toMorow(value) },
+                    function (error) { toMorow(error) }
+                )
+            } else {
+                return 'error'
+            }
+        }
+        start()
+    </script>
+</body>
+
+</html>

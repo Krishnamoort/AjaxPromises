@@ -1,0 +1,54 @@
+            APPLICATION PROMMING interface
+
+AJAX stands for Asynchronous JAvaScript and XML. It helps in developing better, faster, and more 
+interactive web applications with XML, HTML, CSS, and JavaScript.
+AJAX is based on the following standards:
+• Browser-based presentation
+• Data is fetched from servers and stored in XML format
+• Data is fetched using "XMLHttpRequest" objects
+Servers Internet C
+
+                          AJAX with Fetch API
+
+The Fetch API provides an interface to fetch resources across networks. It helps in defining the 
+HTTP-related concepts such as extensions to HTTP. It is widely used in progressive web app service 
+workers.
+
+example 
+  fetch(‘<URL>’, {method: ‘GET’})
+.then(response=>response.json())
+.then(json=>console.log(json))
+.catch(error=>console.log(‘error:’,error)
+)
+
+                            woring with API
+• Cookieless by default: Application’s authentication could fail, since all implementations of Fetch 
+API may not send cookies.
+• Errors are not rejected: Rejections only occur if a request cannot be completed; therefore, error 
+trapping is complicated to implement.
+• Timeouts are not supported: Browsers will continue to run until and unless they are stopped.
+• Aborting a Fetch: Fetch can be aborted by calling controller.abort();. 
+
+AJAX with Promise
+Let’s assume two functions, welcome() and userProfile(). The userProfile() function will not work 
+as it depends on the welcome() function.
+
+///Ajax without Promise
+function welcome(){
+$.ajax({
+url:<some_URL>,
+type:’POST’,
+data:{ //some data },
+success: userProfile()
+}) 
+}
+
+///Ajax with Promise
+function welcome(){
+return new Promise((resolve, 
+reject)=>{
+$.ajax({
+url:<some_URL>,
+type:’POST’,
+data:{ //some data },
+success: userProfile() }) }) }

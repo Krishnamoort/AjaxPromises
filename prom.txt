@@ -1,0 +1,29 @@
+promises basically Async
+
+js promise object stages
+pending ->undefined
+rejected -->error
+fullfilled-->value
+settled-->
+
+suport
+state and
+result
+
+2callbacks (success and eeror)
+Async --> refer to exceuter
+i has 2 main thinks 
+resolve
+reject
+
+A promise is an object that represents the completion of an event of an asynchronous operation and its 
+result.
+A promise:
+• Improves code readability
+• Handles asynchronous operations
+• Handles errors
+A promise has the following states:
+• fulfilled: When the promise is a success
+• rejected: When the promise is a failure
+• pending: When the promise is in a pending state
+• settled: When the promise is complete
